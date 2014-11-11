@@ -1,0 +1,351 @@
+/************************************
+            NOTES/CREDITS
+************************************
+
+Jeremy Church @ type-scale.com
+Icons thanks to: Open Iconic — www.useiconic.com/open
+
+#FF9726
+#6717FF
+#8770B2
+
+************************************
+            RESET & DEFAULTS
+************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gill sans', arial, sans-serif;
+    font-weight: 100;
+}
+
+body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+    
+    background-color: #eee;
+    background-image: url(/img/paris.jpg);
+    background-position:center top;
+    background-repeat: no-repeat;
+    font-size: 1rem;
+}
+
+
+h1 {
+    text-align: center;
+    color: #6717FF;
+    font-size: 3rem;
+    font-family: 'Pinyon Script', cursive;
+}
+
+p {
+    text-align: center;
+    margin: 2% 5%;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/************************************
+            MOBILE FIRST
+               LAYOUT
+************************************/
+
+.wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    
+    width: 96%;
+    max-width: 1024px;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.formBox, .col {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    
+    margin: 2% 4%;
+}
+
+.inputBox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+            align-content: stretch;
+    
+    width: 100%;
+    padding-left: 2%;
+}
+
+img {
+    width: 10%;
+    max-width: 65px;
+    opacity: .5;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+}
+
+label {
+    font-size: .9rem;
+    letter-spacing: .5px;
+}
+
+input[type=text],
+input[type=date],
+input[type=number] {
+    height: 25px;
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 1%;
+    opacity: .4
+}
+
+/* ------- MAX PRICE --------- */
+
+#range {
+    width: 70%;
+}
+
+output {
+    width: 30%;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+output::before {
+    content: "$ ";
+}
+
+/* -------- BUTTONS -------------*/
+
+input[type=reset],
+input[type=submit]{
+    background-color: #FF9726;
+    width: 40%;
+    max-width: 200px;
+    height: 45px;
+    font-size: 1.2rem;
+    border-style: none
+}
+
+.buttons {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 25px 0;
+    padding-left: 8%;
+}
+
+/* ---------- FOOTER -----------*/
+
+.foot {
+    padding: 2%;
+}
+
+.foot p {
+    font-style: normal;   
+    font-size: .9rem;
+    color: #bbb;
+}
+
+/************************************
+            RESPONSIVE
+************************************/
+
+/* ------ Two Column -------*/
+
+@media all and (min-width: 500px) {
+     form {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: stretch;
+        -webkit-align-items: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
+    }
+    
+   .formBox, .col {
+        -webkit-flex-flow: row;
+            -ms-flex-flow: row;
+                flex-flow: row;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        margin: 1% 1%;
+        width: 48%;
+   }
+    
+    .inputBox {
+        -webkit-flex-flow: column;
+            -ms-flex-flow: column;
+                flex-flow: column;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+    
+    #range {
+        width: 60%;
+    }
+    
+    output {
+        width: 40%;
+    }
+    
+    .buttons {
+        width: 100%;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+       
+        padding: 25px 5% 15px 7%;
+    }
+    
+    .foot p {
+        color: black;
+    }
+}
+
+/* ---------- Four Column ---------- */
+
+@media all and (min-width: 781px) {
+    
+     form {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: stretch;
+        -webkit-align-items: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
+    }
+    
+   .formBox, .col {
+        -webkit-flex-flow: row;
+            -ms-flex-flow: row;
+                flex-flow: row;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        margin: 1% 1%;
+        width: 23%;
+    }
+    
+    .inputBox {
+        -webkit-flex-flow: column;
+            -ms-flex-flow: column;
+                flex-flow: column;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+    
+    output {
+        font-size: 1.3rem;
+       
+    }
+    
+    .buttons {
+        padding: 0;
+        width: 48%;
+        -webkit-justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+    }
+    
+    input[type=reset],
+    input[type=submit]{
+        height: 35px;
+    }
+}
