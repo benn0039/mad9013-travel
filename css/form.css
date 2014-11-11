@@ -42,7 +42,7 @@ body {
             align-content: center;
     
     background-color: #eee;
-    background-image: url(img/paris.jpg);
+    background-image: url(../img/paris.jpg);
     background-position:center top;
     background-repeat: no-repeat;
     font-size: 1rem;
